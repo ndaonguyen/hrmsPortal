@@ -2,11 +2,11 @@
     xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
+   		android:layout_gravity="top" 
         android:orientation="vertical"
         android:layout_margin="@dimen/padding_large"
     	tools:context=".LoginActivity" >
-    	
+<!-- layout-gravity:center -->
 
 		<ImageView
             android:layout_width="match_parent"
@@ -24,7 +24,7 @@
             <EditText
                 android:id="@+id/etUsername"
                 style="@style/EditTextField"
-                android:layout_width="match_parent"
+                android:layout_width="match_parent"    
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/padding_small"
                 android:drawableLeft="@drawable/icon_user"
