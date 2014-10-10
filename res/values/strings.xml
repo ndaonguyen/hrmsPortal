@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">hrmsPortal</string>
+    <string name="action_settings">Settings</string>
+    
+    <string name="label_password">Password</string>
+    <string name="label_username">Username</string>
+    <string name="label_login">Login</string>
+    <string name="msg_no_network_available_">No network available.</string>
+
+</resources>
