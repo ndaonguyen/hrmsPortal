@@ -1,9 +1,9 @@
 package com.sbg.hrmsportal.util;
 
-import com.sbg.hrmsportal.activities.ApplicationConstants;
-
 import android.content.Context;
 import android.content.SharedPreferences;
+
+import com.sbg.hrmsportal.activities.ApplicationConstants;
 
 public class PreferenceUtil {
 	private Context context;

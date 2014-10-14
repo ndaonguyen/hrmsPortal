@@ -8,5 +8,6 @@
     <string name="label_username">Username</string>
     <string name="label_login">Login</string>
     <string name="msg_no_network_available_">No network available.</string>
+    <string name="message_login_failed">Wrong Username or Password</string>
 
 </resources>

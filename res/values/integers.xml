@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="activity_transition_duration">550</integer>
+    <integer name="neue_login_logo_threshold">500</integer>
+    <integer name="neue_login_text_size_threshold">300</integer>
+    <integer name="default_circle_indicator_orientation">0</integer>
+    <integer name="abc_max_action_buttons">2</integer>
+    <integer name="config_activityTransitionDuration">300</integer>
+    <integer name="config_activityHorizontalTransitionDuration">150</integer>
+    <integer name="menu_free_call_order">230</integer>
+    <integer name="maximum_status_length">63206</integer>
+    <integer name="neue_nux_logo_threshold">500</integer>
+    <integer name="neue_nux_text_size_threshold">350</integer>
+    <integer name="width_card">600</integer>
+    <integer name="height_titlebar">90</integer>
+</resources>

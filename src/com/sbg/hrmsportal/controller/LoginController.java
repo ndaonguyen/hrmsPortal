@@ -76,9 +76,9 @@ public class LoginController extends BaseController {
 		try
 		{
 			JsonObject resultobj = jsonData.getAsJsonObject();
-			JsonElement result   = resultobj.get("succeed");
-			String resultStr     = result.toString();
-			if(resultStr.equalsIgnoreCase("true"))
+			JsonElement result   = resultobj.get("status");
+			String resultStr     = result.getAsString();
+			if(resultStr.equalsIgnoreCase("0"))
 				return true;
 			return false;
 		}

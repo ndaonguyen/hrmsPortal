@@ -1,9 +1,5 @@
 package com.sbg.hrmsportal.activities;
 
-import com.sbg.hrmsportal.R;
-import com.sbg.hrmsportal.util.ActivityUtil;
-import com.sbg.hrmsportal.util.BroadcastUtil;
-
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.View;
@@ -11,16 +7,31 @@ import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.EditText;
 
+import com.sbg.hrmsportal.R;
+import com.sbg.hrmsportal.controller.LoginController;
+import com.sbg.hrmsportal.helper.Session;
+import com.sbg.hrmsportal.util.ActivityUtil;
+import com.sbg.hrmsportal.util.BroadcastUtil;
+import com.sbg.hrmsportal.util.PreferenceUtil;
+import com.sbg.hrmsportal.view.MessageToastView;
+import com.sbg.hrmsportal.view.MessageToastView.MESSAGE_TOAST_TYPE;
+
 public class LoginActivity extends BaseActivity {
 
 	private EditText etUsername;
 	private EditText etPassword;
 	private Button btnLogin;
+	private LoginController tableController;
+	private MessageToastView messageToastView;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_login);
+		
+		messageToastView = new MessageToastView(LoginActivity.this);
+		tableController  = Session.getInstance().getControllerHelper(getApplicationContext())
+				  .getLoginController();
 		initViews();
 	}
 	
@@ -72,7 +83,15 @@ public class LoginActivity extends BaseActivity {
 			String pwdTxt 	       		= params[1];
 			String loginResponseString	= ActivityUtil.getLoginResponseString(LoginActivity.this, 
 					  usernameTxt, pwdTxt);
-		
+			
+			if(loginResponseString.equals(""))
+				return false;
+			
+			boolean resultLogin    = tableController.isLoginSuccess(loginResponseString);
+			if(resultLogin == false )
+				return false;
+			
+			PreferenceUtil.getInstance(LoginActivity.this).setAppUserName(usernameTxt);
 			return true;
 		}
 		
@@ -80,10 +99,20 @@ public class LoginActivity extends BaseActivity {
 		protected void onPostExecute(final Boolean success) {
 			etPassword.setText("");
 			if(success) {
+				startModeActivity();
 			}
 			else {
+				messageToastView.show(getString(R.string.message_login_failed), MESSAGE_TOAST_TYPE.MESSAGE_DANGER);
 			}
 		}
+	}
+	
+	public void startModeActivity()
+	{
+		String appUsername  = etUsername.getText().toString();
+//		final Intent modeActivity = new Intent(LoginActivity.this, ModeActivity.class);
+//		modeActivity.setFlags(Intent.FLAG_ACTIVITY_NO_HISTORY);
+//		startActivity(modeActivity);
 	}
 	
 //	@Override

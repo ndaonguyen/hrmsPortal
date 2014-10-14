@@ -8,7 +8,56 @@
 package com.sbg.hrmsportal;
 
 public final class R {
+    public static final class anim {
+        public static final int down_from_top=0x7f040000;
+        public static final int fadein=0x7f040001;
+        public static final int slide_in_left=0x7f040002;
+        public static final int slide_in_up_to_down=0x7f040003;
+        public static final int slide_out_curr_to_left=0x7f040004;
+        public static final int slide_out_curr_to_right=0x7f040005;
+        public static final int slide_out_curr_to_up=0x7f040006;
+        public static final int up_from_bottom=0x7f040007;
+    }
     public static final class attr {
+    }
+    public static final class color {
+        public static final int app_color=0x7f050022;
+        public static final int bg_curr_month_weekday=0x7f05000b;
+        public static final int bg_curr_month_weekend=0x7f05000d;
+        public static final int bg_days_weekday=0x7f050007;
+        public static final int bg_days_weekend=0x7f050009;
+        public static final int bg_not_curr_month_weekday=0x7f05000f;
+        public static final int bg_not_curr_month_weekend=0x7f050011;
+        public static final int bg_today=0x7f050013;
+        public static final int black=0x7f050018;
+        public static final int blue=0x7f050023;
+        public static final int border=0x7f050005;
+        public static final int checked_in=0x7f050024;
+        public static final int dark_grey=0x7f05001d;
+        public static final int dark_grey_strong=0x7f050021;
+        public static final int green=0x7f05001f;
+        public static final int grey=0x7f05001a;
+        public static final int light_blue=0x7f05001c;
+        public static final int light_gery=0x7f05001b;
+        public static final int no_color=0x7f050001;
+        public static final int orange=0x7f050019;
+        public static final int red=0x7f05001e;
+        public static final int red_dark=0x7f050020;
+        public static final int side_navigation_background=0x7f050014;
+        public static final int side_navigation_item_text_color=0x7f050017;
+        public static final int side_navigation_list_divider_color=0x7f050016;
+        public static final int side_navigation_outside_background=0x7f050015;
+        public static final int text_curr_month_weekday=0x7f05000a;
+        public static final int text_curr_month_weekend=0x7f05000c;
+        public static final int text_days_weekday=0x7f050006;
+        public static final int text_days_weekend=0x7f050008;
+        public static final int text_not_curr_month_weekday=0x7f05000e;
+        public static final int text_not_curr_month_weekend=0x7f050010;
+        public static final int text_today=0x7f050012;
+        public static final int transparent_black=0x7f050003;
+        public static final int transparent_black_dark=0x7f050004;
+        public static final int transparent_white=0x7f050002;
+        public static final int white=0x7f050000;
     }
     public static final class dimen {
         /**  Default screen margins, per the Android Design guidelines. 
@@ -17,11 +66,11 @@ public final class R {
          screen margins) for sw720dp devices (e.g. 10" tablets) in landscape here.
     
          */
-        public static final int activity_horizontal_margin=0x7f040000;
-        public static final int activity_vertical_margin=0x7f040001;
-        public static final int padding_large=0x7f040003;
-        public static final int padding_normal=0x7f040004;
-        public static final int padding_small=0x7f040002;
+        public static final int activity_horizontal_margin=0x7f060000;
+        public static final int activity_vertical_margin=0x7f060001;
+        public static final int padding_large=0x7f060003;
+        public static final int padding_normal=0x7f060004;
+        public static final int padding_small=0x7f060002;
     }
     public static final class drawable {
         public static final int background_et=0x7f020000;
@@ -30,29 +79,48 @@ public final class R {
         public static final int btn_blue_pressed=0x7f020003;
         public static final int button_blue=0x7f020004;
         public static final int ic_launcher=0x7f020005;
-        public static final int icon_key=0x7f020006;
-        public static final int icon_user=0x7f020007;
+        public static final int icon_alert=0x7f020006;
+        public static final int icon_close=0x7f020007;
+        public static final int icon_info=0x7f020008;
+        public static final int icon_key=0x7f020009;
+        public static final int icon_user=0x7f02000a;
     }
     public static final class id {
-        public static final int action_settings=0x7f080004;
-        public static final int btnLogin=0x7f080003;
-        public static final int etPassword=0x7f080002;
-        public static final int etUsername=0x7f080001;
-        public static final int loginLayout=0x7f080000;
+        public static final int action_settings=0x7f0b0004;
+        public static final int btnLogin=0x7f0b0003;
+        public static final int etPassword=0x7f0b0002;
+        public static final int etUsername=0x7f0b0001;
+        public static final int loginLayout=0x7f0b0000;
+    }
+    public static final class integer {
+        public static final int abc_max_action_buttons=0x7f070004;
+        public static final int activity_transition_duration=0x7f070000;
+        public static final int config_activityHorizontalTransitionDuration=0x7f070006;
+        public static final int config_activityTransitionDuration=0x7f070005;
+        public static final int default_circle_indicator_orientation=0x7f070003;
+        public static final int height_titlebar=0x7f07000c;
+        public static final int maximum_status_length=0x7f070008;
+        public static final int menu_free_call_order=0x7f070007;
+        public static final int neue_login_logo_threshold=0x7f070001;
+        public static final int neue_login_text_size_threshold=0x7f070002;
+        public static final int neue_nux_logo_threshold=0x7f070009;
+        public static final int neue_nux_text_size_threshold=0x7f07000a;
+        public static final int width_card=0x7f07000b;
     }
     public static final class layout {
         public static final int activity_login=0x7f030000;
     }
     public static final class menu {
-        public static final int login=0x7f070000;
+        public static final int login=0x7f0a0000;
     }
     public static final class string {
-        public static final int action_settings=0x7f050001;
-        public static final int app_name=0x7f050000;
-        public static final int label_login=0x7f050004;
-        public static final int label_password=0x7f050002;
-        public static final int label_username=0x7f050003;
-        public static final int msg_no_network_available_=0x7f050005;
+        public static final int action_settings=0x7f080001;
+        public static final int app_name=0x7f080000;
+        public static final int label_login=0x7f080004;
+        public static final int label_password=0x7f080002;
+        public static final int label_username=0x7f080003;
+        public static final int message_login_failed=0x7f080006;
+        public static final int msg_no_network_available_=0x7f080005;
     }
     public static final class style {
         /** 
@@ -76,16 +144,22 @@ public final class R {
     
  API 14 theme customizations can go here. 
          */
-        public static final int AppBaseTheme=0x7f060000;
+        public static final int AppBaseTheme=0x7f090000;
         /**  Application theme. 
  All customizations that are NOT specific to a particular API-level can go here. 
          */
-        public static final int AppTheme=0x7f060001;
-        public static final int Button=0x7f060006;
-        public static final int Button_Blue=0x7f060004;
-        public static final int Button_Inverse=0x7f060005;
-        public static final int EditTextField=0x7f060003;
-        public static final int Text=0x7f060002;
-        public static final int Text_Label=0x7f060007;
+        public static final int AppTheme=0x7f090001;
+        public static final int Button=0x7f09000c;
+        public static final int Button_Blue=0x7f09000a;
+        public static final int Button_Inverse=0x7f09000b;
+        public static final int EditTextField=0x7f090009;
+        public static final int Header=0x7f090002;
+        public static final int Header_H2=0x7f090003;
+        public static final int Header_H2_Blue=0x7f090006;
+        public static final int Header_H2_Inverse=0x7f090007;
+        public static final int Header_H2_Red=0x7f090005;
+        public static final int Header_H2_Yellow=0x7f090004;
+        public static final int Text=0x7f090008;
+        public static final int Text_Label=0x7f09000d;
     }
 }
