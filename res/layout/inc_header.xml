@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:background="@color/blue" >
+
+    <ImageButton
+        android:id="@+id/imgBtnBack"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:background="@color/no_color"
+        android:contentDescription="@null"
+        android:paddingRight="@dimen/padding_normal"
+        android:src="@drawable/icon_back" />
+
+    <com.sbg.hrmsportal.view.TextViewStyled
+        android:id="@+id/tvTitle"
+        style="@style/Header.H2.Inverse"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:paddingBottom="8dp"
+        android:paddingTop="8dp"
+        android:singleLine="true"
+        android:textIsSelectable="false" />
+
+
+    <ImageButton
+        android:id="@+id/imgBtnRefresh"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="@dimen/padding_normal"
+        android:layout_marginRight="@dimen/padding_normal"
+        android:background="@color/no_color"
+        android:contentDescription="@null"
+        android:src="@drawable/icon_refresh" />
+    
+    
+    
+    <ImageButton
+        android:id="@+id/imgBtnLogout"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@null"
+        android:background="@color/no_color"
+        android:src="@drawable/icon_log_out" />
+
+</LinearLayout>

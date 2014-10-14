@@ -39,7 +39,7 @@ public class MessageToastView extends LinearLayout {
 		tvMessage.setPadding(20, 20, 20, 20);
 		tvMessage.setLayoutParams(new LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.WRAP_CONTENT));
 		tvMessage.setGravity(Gravity.CENTER);
-//		tvMessage.setTextColor(getResources().getColor(R.color.white));
+		tvMessage.setTextColor(getResources().getColor(R.color.white));
 
 		addView(tvMessage);
 	}
@@ -102,7 +102,7 @@ public class MessageToastView extends LinearLayout {
 					} catch (Exception e) {
 					}
 				}
-			}, 2500);
+			}, 1500);
 		}
 	}
 

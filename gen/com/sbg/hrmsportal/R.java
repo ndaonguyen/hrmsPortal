@@ -80,17 +80,27 @@ public final class R {
         public static final int button_blue=0x7f020004;
         public static final int ic_launcher=0x7f020005;
         public static final int icon_alert=0x7f020006;
-        public static final int icon_close=0x7f020007;
-        public static final int icon_info=0x7f020008;
-        public static final int icon_key=0x7f020009;
-        public static final int icon_user=0x7f02000a;
+        public static final int icon_back=0x7f020007;
+        public static final int icon_close=0x7f020008;
+        public static final int icon_info=0x7f020009;
+        public static final int icon_key=0x7f02000a;
+        public static final int icon_log_out=0x7f02000b;
+        public static final int icon_refresh=0x7f02000c;
+        public static final int icon_user=0x7f02000d;
     }
     public static final class id {
-        public static final int action_settings=0x7f0b0004;
+        public static final int action_settings=0x7f0b000b;
+        public static final int btnClaim=0x7f0b0006;
+        public static final int btnLeave=0x7f0b0005;
         public static final int btnLogin=0x7f0b0003;
         public static final int etPassword=0x7f0b0002;
         public static final int etUsername=0x7f0b0001;
+        public static final int imgBtnBack=0x7f0b0007;
+        public static final int imgBtnLogout=0x7f0b000a;
+        public static final int imgBtnRefresh=0x7f0b0009;
+        public static final int include1=0x7f0b0004;
         public static final int loginLayout=0x7f0b0000;
+        public static final int tvTitle=0x7f0b0008;
     }
     public static final class integer {
         public static final int abc_max_action_buttons=0x7f070004;
@@ -109,18 +119,29 @@ public final class R {
     }
     public static final class layout {
         public static final int activity_login=0x7f030000;
+        public static final int activity_main=0x7f030001;
+        public static final int activity_menu=0x7f030002;
+        public static final int inc_header=0x7f030003;
     }
     public static final class menu {
         public static final int login=0x7f0a0000;
+        public static final int main=0x7f0a0001;
+        public static final int menu=0x7f0a0002;
     }
     public static final class string {
         public static final int action_settings=0x7f080001;
         public static final int app_name=0x7f080000;
+        public static final int btn_claim=0x7f080009;
+        public static final int btn_leave=0x7f08000a;
+        public static final int hello_world=0x7f080008;
         public static final int label_login=0x7f080004;
         public static final int label_password=0x7f080002;
         public static final int label_username=0x7f080003;
+        public static final int lbl_logoutBtn=0x7f08000c;
         public static final int message_login_failed=0x7f080006;
         public static final int msg_no_network_available_=0x7f080005;
+        public static final int title_activity_main=0x7f080007;
+        public static final int title_activity_menu=0x7f08000b;
     }
     public static final class style {
         /** 

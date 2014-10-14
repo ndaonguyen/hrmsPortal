@@ -19,17 +19,17 @@ public class LoginController extends BaseController {
 		preferenceUtil = PreferenceUtil.getInstance(context);
 	}
 
-	public boolean mainHandleServerData(String json)
-	{
-		JsonParser parser       = new JsonParser();
-		JsonElement jsonData    = (JsonElement) parser.parse(json);
-		JsonObject dataObj      = jsonData.getAsJsonObject();
-		JsonElement dataElement = dataObj.get("data");
-		
-		
-		
-		return true;
-	}
+//	public boolean mainHandleServerData(String json)
+//	{
+//		JsonParser parser       = new JsonParser();
+//		JsonElement jsonData    = (JsonElement) parser.parse(json);
+//		JsonObject dataObj      = jsonData.getAsJsonObject();
+//		JsonElement dataElement = dataObj.get("data");
+//		
+//		
+//		
+//		return true;
+//	}
 	
 	
 

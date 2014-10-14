@@ -1,5 +1,6 @@
 package com.sbg.hrmsportal.activities;
 
+import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.View;
@@ -109,10 +110,9 @@ public class LoginActivity extends BaseActivity {
 	
 	public void startModeActivity()
 	{
-		String appUsername  = etUsername.getText().toString();
-//		final Intent modeActivity = new Intent(LoginActivity.this, ModeActivity.class);
-//		modeActivity.setFlags(Intent.FLAG_ACTIVITY_NO_HISTORY);
-//		startActivity(modeActivity);
+		final Intent menuActivity = new Intent(LoginActivity.this, MenuActivity.class);
+		menuActivity.setFlags(Intent.FLAG_ACTIVITY_NO_HISTORY);
+		startActivity(menuActivity);
 	}
 	
 //	@Override

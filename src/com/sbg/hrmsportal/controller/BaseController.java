@@ -18,7 +18,6 @@ public abstract class BaseController {
 		context = controllerHelper.getContext();
 	}
 	
-
 	public ControllerHelper getControllerHelper() {
 		return this.controllerHelper;
 	}
