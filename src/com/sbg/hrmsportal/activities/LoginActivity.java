@@ -30,8 +30,8 @@ public class LoginActivity extends BaseActivity {
 		btnLogin = (Button) findViewById(R.id.btnLogin);
 
 		//set simple
-//		etUsername.setText("1_coconut");
-//		etPassword.setText("coconut");
+		etUsername.setText("ndnguyen");
+		etPassword.setText("12345");
 		
 		// Implementations
 		btnLogin.setOnClickListener(new OnClickListener() {

@@ -14,9 +14,9 @@ public class ApplicationConstants {
 	/*
 	 * Web url
 	 */
-	public static final String SERVER_URL 		= "http://192.168.1.251:8888/TurnoutWeb/mobile/"; 
+	public static final String SERVER_URL 		= "http://demo.tap2s.com/hrms/portal/index.pzx"; 
 	public static final String SCRIPT_DO_UPDATE = "fetchData/doUpdate";
-	public static final String SCRIPT_DO_LOGIN  = "fetchData/login";
+	public static final String SCRIPT_DO_LOGIN  = "?c=aba4b4f3d61b84b615467d17db2f9beda2cb8b5c005802b31a4093a77f8a1500&t=p_m_l";
 
 
 	/*

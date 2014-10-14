@@ -54,7 +54,12 @@ public class LoginController extends BaseController {
 //		returnObject.add("data", data);
 //
 //		return returnObject.toString();
-		return "";
+		
+		
+		JsonObject data         = new JsonObject();
+		data.addProperty("appUsername", appUsername);
+		data.addProperty("appPassword", appPassword);
+		return data.toString();
 	}
 	
 	
