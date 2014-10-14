@@ -34,9 +34,11 @@ public class ClaimController extends BaseController {
 		
 		try
 		{
-			JsonObject resultobj = jsonData.getAsJsonObject();
-			JsonElement result   = resultobj.get("status");
-			String resultStr     = result.getAsString();
+			JsonObject resultobj 	= jsonData.getAsJsonObject();
+			JsonElement result   	= resultobj.get("status");
+			JsonElement claimData   = resultobj.get("data");
+			
+			String resultStr     	= result.getAsString();
 			if(resultStr.equalsIgnoreCase("0"))
 				return true;
 			return false;
