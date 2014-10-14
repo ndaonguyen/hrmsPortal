@@ -55,8 +55,23 @@ public class MenuActivity extends BaseActivity {
 			}
 		});
 		
-		btnRefresh.setVisibility(View.GONE);
+		btnBack.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View arg0) {
+				
+			}
+		});
 		
+		btnLogout.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				
+			}
+		});
+		
+		btnRefresh.setVisibility(View.GONE);
 	}
 	
 	public void startMainActivity()
