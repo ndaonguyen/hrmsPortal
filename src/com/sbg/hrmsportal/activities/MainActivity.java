@@ -1,6 +1,8 @@
 package com.sbg.hrmsportal.activities;
 
 import com.sbg.hrmsportal.R;
+import com.sbg.hrmsportal.controller.ClaimController;
+import com.sbg.hrmsportal.helper.Session;
 import com.sbg.hrmsportal.util.ActivityUtil;
 import com.sbg.hrmsportal.util.PreferenceUtil;
 import com.sbg.hrmsportal.view.MessageToastView;
@@ -8,7 +10,6 @@ import com.sbg.hrmsportal.view.MessageToastView.MESSAGE_TOAST_TYPE;
 
 import android.os.AsyncTask;
 import android.os.Bundle;
-import android.os.Handler;
 import android.app.Activity;
 import android.content.Context;
 
@@ -23,33 +24,27 @@ public class MainActivity extends Activity {
 		getClaimData.execute();
 	}
 	
-	public class GetClaimData extends AsyncTask<Void, Void, Boolean> {
+	public class GetClaimData extends AsyncTask<Void, Void, String> {
 
 		@Override
-		protected Boolean doInBackground(Void... params) {
+		protected String doInBackground(Void... params) {
 			Context context = MainActivity.this;
 			String empCode  = PreferenceUtil.getInstance(context).getAppUserName();
 			
 			String claimResponseString	= ActivityUtil.getClaimResponseString(MainActivity.this, empCode);
 			if(claimResponseString.equals(""))
-				return false;
+				return "";
 			
-			
-			
-			return true;
+			return "";
 		}
 
 		@Override
-		protected void onPostExecute(final Boolean success) {
-			if (success) {
-				// delay some milisec in case logo is changed
-				new Handler().postDelayed(new Runnable() {
-					@Override
-					public void run() {
-						initViews();
-					}
-				}, 500);
-
+		protected void onPostExecute(final String claimResponse) {
+			if (claimResponse != "") {
+				ClaimController claimController = new ClaimController(Session.getInstance().getControllerHelper(MainActivity.this));
+				claimController.parseClaim(claimResponse);
+				
+				initViews();
 			} else {
 				MessageToastView messageToastView = new MessageToastView(MainActivity.this);
 				messageToastView.show(getString(R.string.msg_no_network_available_), MESSAGE_TOAST_TYPE.MESSAGE_DANGER);
