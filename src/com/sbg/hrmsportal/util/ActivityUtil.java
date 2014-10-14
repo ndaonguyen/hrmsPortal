@@ -6,6 +6,7 @@ import android.app.Activity;
 import android.content.Context;
 
 import com.sbg.hrmsportal.activities.ApplicationConstants;
+import com.sbg.hrmsportal.controller.ClaimController;
 import com.sbg.hrmsportal.controller.LoginController;
 import com.sbg.hrmsportal.helper.CLog;
 import com.sbg.hrmsportal.helper.CNetworkClient;
@@ -21,11 +22,8 @@ public class ActivityUtil extends Activity{
 		String loginJsonString 			= tableController.getJsonLoginString(usernameTxt, pwdTxt);
 		
 		CNetworkClient networkClient    = new CNetworkClient(context);
-//		CNetworkResponse response       = networkClient.post(ApplicationConstants.getScriptUrl(ApplicationConstants.SCRIPT_DO_LOGIN),
-//										  null, loginJsonString.getBytes());
-		CNetworkResponse response       = networkClient.post(ApplicationConstants.URL_LOGIN,
-				  null, loginJsonString.getBytes());
-		
+		CNetworkResponse response       = networkClient.post(ApplicationConstants.getScriptUrl(ApplicationConstants.SCRIPT_DO_LOGIN),
+										  null, loginJsonString.getBytes());
 		
 		if (response == null || response.status != HttpURLConnection.HTTP_OK) 
 			return "";
@@ -34,6 +32,26 @@ public class ActivityUtil extends Activity{
 		CLog.write(loginResponseString);
 		
 		return loginResponseString;
+	}
+	
+	
+	public static String getClaimResponseString(Context context, String appUsername)
+	{
+		ClaimController tableController = Session.getInstance()
+										  .getControllerHelper(context).getClaimController();
+		String empCodeJsonString 			= tableController.getJsonEmpCode(appUsername);
+		
+		CNetworkClient networkClient    = new CNetworkClient(context);
+		CNetworkResponse response       = networkClient.post(ApplicationConstants.getScriptUrl(ApplicationConstants.SCRIPT_GET_CLAIM),
+										  null, empCodeJsonString.getBytes());
+		
+		if (response == null || response.status != HttpURLConnection.HTTP_OK) 
+			return "";
+		
+		String claimDataString      = new String(response.body);
+		CLog.write(claimDataString);
+		
+		return claimDataString;
 	}
 	
 	

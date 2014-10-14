@@ -111,7 +111,7 @@ public class LoginActivity extends BaseActivity {
 	public void startModeActivity()
 	{
 		final Intent menuActivity = new Intent(LoginActivity.this, MenuActivity.class);
-		menuActivity.setFlags(Intent.FLAG_ACTIVITY_NO_HISTORY);
+//		menuActivity.setFlags(Intent.FLAG_ACTIVITY_NO_HISTORY);
 		startActivity(menuActivity);
 	}
 	

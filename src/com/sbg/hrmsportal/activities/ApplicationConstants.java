@@ -14,10 +14,9 @@ public class ApplicationConstants {
 	/*
 	 * Web url
 	 */
-	public static final String SERVER_URL 		= "http://demo.tap2s.com/hrms/portal/index.pzx"; 
-	public static final String SCRIPT_DO_UPDATE = "fetchData/doUpdate";
-	public static final String SCRIPT_DO_LOGIN  = "?c=68bc7539c3ea1ed51898386cbe0f45776f58cb8b73acbf78f0f584a7e7457f88&t=p_m_l";
-	public static final String URL_LOGIN  		= "http://demo.tap2s.com/hrms/portal/mobile.pzx?c=MobileHRMS&t=p_m_l";
+	public static final String SERVER_URL 		= "http://demo.tap2s.com/hrms/portal/mobile.pzx"; 
+	public static final String SCRIPT_DO_LOGIN  = "?c=MobileHRMS&t=p_m_l";
+	public static final String SCRIPT_GET_CLAIM = "?c=MobileHRMS&t=p_m_c";
 
 
 	/*

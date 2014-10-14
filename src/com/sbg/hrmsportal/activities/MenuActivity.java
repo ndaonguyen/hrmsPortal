@@ -4,7 +4,6 @@ import com.sbg.hrmsportal.R;
 import com.sbg.hrmsportal.view.TextViewStyled;
 
 import android.os.Bundle;
-import android.app.Activity;
 import android.content.Intent;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -77,7 +76,7 @@ public class MenuActivity extends BaseActivity {
 	public void startMainActivity()
 	{
 		final Intent mainActivity = new Intent(MenuActivity.this, MainActivity.class);
-		mainActivity.setFlags(Intent.FLAG_ACTIVITY_NO_HISTORY);
+//		mainActivity.setFlags(Intent.FLAG_ACTIVITY_NO_HISTORY);
 		startActivity(mainActivity);
 	}
 	
