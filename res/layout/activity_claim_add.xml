@@ -1,14 +1,55 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:paddingBottom="@dimen/activity_vertical_margin"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:gravity="center"
     tools:context=".ClaimAddActivity" >
 
-    <include
-	    android:id="@+id/include1"
-	    layout="@layout/inc_header" />
-    
-    
-
-</RelativeLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+            
+		<LinearLayout
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:baselineAligned="false"
+	        android:orientation="vertical" >
+	  
+	        <include
+	            android:id="@+id/include1"
+	            layout="@layout/inc_header" />
+	
+	            <LinearLayout
+	               android:layout_width="match_parent"
+	               android:layout_height="wrap_content"
+	               android:baselineAligned="false"
+	               android:layout_gravity="center"
+	               android:gravity="center"
+	               android:orientation="vertical" >
+	    
+		            <LinearLayout
+		                android:id="@+id/ClaimTemplateLayout"
+		                android:layout_width="match_parent"
+		                android:layout_height="wrap_content"
+		                android:layout_marginTop="@dimen/padding_mini"
+		                android:background="@drawable/background_card"
+		                android:orientation="vertical"
+		                android:padding="@dimen/padding_small" >
+		
+		            </LinearLayout>
+		                
+		            <Button
+		                android:id="@+id/btnAddClaim"
+		                style="@style/Button.Blue"
+		                android:layout_width="wrap_content"
+		                android:layout_height="wrap_content"
+		                android:layout_margin="@dimen/padding_normal"
+		                android:paddingLeft="@dimen/padding_large"
+		                android:paddingRight="@dimen/padding_large"
+		                android:layout_gravity="center"
+		                android:text="@string/lbl_add_new_claim" />
+	            </LinearLayout>
+	    </LinearLayout>
+	</ScrollView>
+</FrameLayout>

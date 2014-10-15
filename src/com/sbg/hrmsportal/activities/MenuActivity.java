@@ -10,7 +10,7 @@ import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.ImageButton;
 
-public class MenuActivity extends BaseActivity {
+public class MenuActivity extends BaseClaimActivity {
 	private Button btnClaim;
 	private Button btnLeave;
 	private ImageButton btnRefresh;
@@ -69,6 +69,7 @@ public class MenuActivity extends BaseActivity {
 		final Intent mainActivity = new Intent(MenuActivity.this, MainActivity.class);
 //		mainActivity.setFlags(Intent.FLAG_ACTIVITY_NO_HISTORY);
 		startActivity(mainActivity);
+		overridePendingTransition(R.anim.slide_in_left_to_right, R.anim.slide_out_curr_to_right);
 	}
 
 	@Override

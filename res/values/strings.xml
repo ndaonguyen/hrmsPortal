@@ -19,5 +19,6 @@
     <string name="title_activity_claim_item">ClaimItemActivity</string>
     <string name="title_activity_claim_doc">ClaimDocActivity</string>
     <string name="title_activity_claim_message">ClaimMessageActivity</string>
+    <string name="lbl_add_new_claim">Add</string>
 
 </resources>

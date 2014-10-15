@@ -28,7 +28,7 @@ import android.widget.AdapterView.OnItemClickListener;
 import android.content.Context;
 import android.content.Intent;
 
-public class MainActivity extends BaseActivity {
+public class MainActivity extends BaseClaimActivity {
 	
 	private List<ClaimParse> mGuestList = null;
 	private ListView lvMain;
@@ -108,6 +108,7 @@ public class MainActivity extends BaseActivity {
 			public void onItemClick(AdapterView<?> arg0, View arg1, int position, long id) {
 				Intent intent = new Intent(MainActivity.this, ClaimAddActivity.class);
 				startActivity(intent);
+				overridePendingTransition(R.anim.slide_in_left_to_right, R.anim.slide_out_curr_to_right);
 			}
 		});
 	}
@@ -161,6 +162,7 @@ public class MainActivity extends BaseActivity {
 				public void onClick(View arg0) {
 					Intent intent = new Intent(MainActivity.this, ClaimDocActivity.class);
 					startActivity(intent);
+					overridePendingTransition(R.anim.slide_in_left_to_right, R.anim.slide_out_curr_to_right);
 				}
 			});
 			
@@ -171,6 +173,7 @@ public class MainActivity extends BaseActivity {
 				public void onClick(View arg0) {
 					Intent intent = new Intent(MainActivity.this, ClaimItemActivity.class);
 					startActivity(intent);
+					overridePendingTransition(R.anim.slide_in_left_to_right, R.anim.slide_out_curr_to_right);
 				}
 			});
 			
@@ -181,6 +184,7 @@ public class MainActivity extends BaseActivity {
 				public void onClick(View arg0) {
 					Intent intent = new Intent(MainActivity.this, ClaimMessageActivity.class);
 					startActivity(intent);
+					overridePendingTransition(R.anim.slide_in_left_to_right, R.anim.slide_out_curr_to_right);
 				}
 			});
 

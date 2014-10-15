@@ -6,22 +6,22 @@
 
     <com.sbg.hrmsportal.view.TextViewStyleBold
         android:id="@+id/tvLabel"
+        style="@style/Header.H4"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/padding_normal"
+        android:layout_weight="0.35"
+        android:paddingLeft="@dimen/padding_small"
+        android:textColor="@color/blue" />
+    
+    <EditText
+        android:id="@+id/tvValue"
         style="@style/Header.H3"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/padding_normal"
-        android:layout_weight="0.3"
+        android:layout_weight="0.65"
         android:paddingLeft="@dimen/padding_small"
-        android:textColor="@color/blue" />
-    
-    <Spinner
-	    android:id="@+id/tvValue"
-	    android:layout_width="match_parent"
-	    android:layout_height="wrap_content"
-	    android:paddingLeft="@dimen/padding_small"
-	    android:layout_marginTop="@dimen/padding_normal"
-	    android:background="@android:drawable/btn_dropdown"
-	    android:spinnerMode="dropdown"
-	    android:textColor="@color/grey" />
+        android:textColor="@color/grey" />
    
 </LinearLayout>

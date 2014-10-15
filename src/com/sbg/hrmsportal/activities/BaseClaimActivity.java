@@ -13,7 +13,7 @@ import android.view.WindowManager;
 import android.view.View.OnClickListener;
 import android.widget.ImageButton;
 
-public abstract class BaseActivity extends Activity{
+public abstract class BaseClaimActivity extends Activity{
 	private ImageButton btnBack;
 	private ImageButton btnRefresh;
 	private ImageButton btnLogout;
@@ -52,10 +52,10 @@ public abstract class BaseActivity extends Activity{
 
 					@Override
 					public void onClick(View arg0) {
-						if (ApplicationConstants.haveInternet(BaseActivity.this)) 
+						if (ApplicationConstants.haveInternet(BaseClaimActivity.this)) 
 							finishActivityWithAnimation();
 						else
-							BroadcastUtil.broadcastToastMessage(BaseActivity.this, R.string.msg_no_network_available_);
+							BroadcastUtil.broadcastToastMessage(BaseClaimActivity.this, R.string.msg_no_network_available_);
 					}
 				});
 			}
@@ -68,10 +68,10 @@ public abstract class BaseActivity extends Activity{
 
 					@Override
 					public void onClick(View arg0) {
-						if (ApplicationConstants.haveInternet(BaseActivity.this)) 
-							BroadcastUtil.broadcastToastMessage(BaseActivity.this, R.string.update_later);
+						if (ApplicationConstants.haveInternet(BaseClaimActivity.this)) 
+							BroadcastUtil.broadcastToastMessage(BaseClaimActivity.this, R.string.update_later);
 						else
-							BroadcastUtil.broadcastToastMessage(BaseActivity.this, R.string.msg_no_network_available_);
+							BroadcastUtil.broadcastToastMessage(BaseClaimActivity.this, R.string.msg_no_network_available_);
 					}
 				});
 			}
@@ -84,7 +84,6 @@ public abstract class BaseActivity extends Activity{
 
 					@Override
 					public void onClick(View v) {
-						// finishActivityWithAnimation();
 						logout();
 					}
 				});
@@ -97,10 +96,10 @@ public abstract class BaseActivity extends Activity{
 				
 				@Override
 				public void onClick(View v) {
-					if (ApplicationConstants.haveInternet(BaseActivity.this)) 
-						BroadcastUtil.broadcastToastMessage(BaseActivity.this, R.string.update_later);
+					if (ApplicationConstants.haveInternet(BaseClaimActivity.this)) 
+						BroadcastUtil.broadcastToastMessage(BaseClaimActivity.this, R.string.update_later);
 					else
-						BroadcastUtil.broadcastToastMessage(BaseActivity.this, R.string.msg_no_network_available_);
+						BroadcastUtil.broadcastToastMessage(BaseClaimActivity.this, R.string.msg_no_network_available_);
 				}
 			});
 		}
@@ -111,10 +110,12 @@ public abstract class BaseActivity extends Activity{
 				
 				@Override
 				public void onClick(View v) {
-					if (ApplicationConstants.haveInternet(BaseActivity.this)) 
-						startActivity(new Intent(BaseActivity.this, ClaimAddActivity.class));
-					else
-						BroadcastUtil.broadcastToastMessage(BaseActivity.this, R.string.msg_no_network_available_);
+					if (ApplicationConstants.haveInternet(BaseClaimActivity.this)) {
+						startActivity(new Intent(BaseClaimActivity.this, ClaimAddActivity.class));
+						overridePendingTransition(R.anim.slide_in_left_to_right, R.anim.slide_out_curr_to_right);
+					} else {
+						BroadcastUtil.broadcastToastMessage(BaseClaimActivity.this, R.string.msg_no_network_available_);
+					}
 				}
 			});
 		}
@@ -123,8 +124,9 @@ public abstract class BaseActivity extends Activity{
 	}
 	
 	protected void logout() {
-		Intent loginActivity = new Intent(BaseActivity.this, LoginActivity.class);
+		Intent loginActivity = new Intent(BaseClaimActivity.this, LoginActivity.class);
 		startActivity(loginActivity);
+		overridePendingTransition(R.anim.slide_in_left_to_right, R.anim.slide_out_curr_to_right);
 	}
 	
 	/**

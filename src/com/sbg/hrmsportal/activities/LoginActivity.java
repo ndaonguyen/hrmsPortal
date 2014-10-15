@@ -120,6 +120,7 @@ public class LoginActivity extends Activity {
 		final Intent menuActivity = new Intent(LoginActivity.this, MenuActivity.class);
 //		menuActivity.setFlags(Intent.FLAG_ACTIVITY_NO_HISTORY);
 		startActivity(menuActivity);
+		overridePendingTransition(R.anim.slide_in_left_to_right, R.anim.slide_out_curr_to_right);
 	}
 	
 //	@Override
