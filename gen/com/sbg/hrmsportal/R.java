@@ -142,6 +142,7 @@ public final class R {
         public static final int msg_no_network_available_=0x7f080005;
         public static final int title_activity_main=0x7f080007;
         public static final int title_activity_menu=0x7f08000b;
+        public static final int update_later=0x7f08000d;
     }
     public static final class style {
         /** 

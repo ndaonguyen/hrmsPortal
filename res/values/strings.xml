@@ -14,5 +14,8 @@
     <string name="btn_leave">Leave</string>
     <string name="title_activity_menu">MenuActivity</string>
     <string name="lbl_logoutBtn">Log out</string>
+    
+    
+    <string name="update_later">Under construction.</string>
 
 </resources>

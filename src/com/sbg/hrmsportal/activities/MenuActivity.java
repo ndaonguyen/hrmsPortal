@@ -1,6 +1,7 @@
 package com.sbg.hrmsportal.activities;
 
 import com.sbg.hrmsportal.R;
+import com.sbg.hrmsportal.util.BroadcastUtil;
 import com.sbg.hrmsportal.view.TextViewStyled;
 
 import android.os.Bundle;
@@ -17,6 +18,7 @@ public class MenuActivity extends BaseActivity {
 	private ImageButton btnRefresh;
 	private ImageButton btnLogout;
 	private TextViewStyled title;
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -35,13 +37,20 @@ public class MenuActivity extends BaseActivity {
 		
 		title    = (TextViewStyled) findViewById(R.id.tvTitle);
 		title.setText("Menu");
-
+		
+		setupButton();
+	}
+	
+	private void setupButton() {
 		// Implementations
 		btnClaim.setOnClickListener(new OnClickListener() {
 
 			@Override
 			public void onClick(View arg0) {
-				startMainActivity(); //Claim Activity
+				if (ApplicationConstants.haveInternet(MenuActivity.this)) 
+					startMainActivity(); //Claim Activity
+				else
+					BroadcastUtil.broadcastToastMessage(MenuActivity.this, R.string.msg_no_network_available_);
 			}
 		});
 		
@@ -50,7 +59,10 @@ public class MenuActivity extends BaseActivity {
 
 			@Override
 			public void onClick(View arg0) {
-				
+				if (ApplicationConstants.haveInternet(MenuActivity.this)) 
+					BroadcastUtil.broadcastToastMessage(MenuActivity.this, R.string.update_later);
+				else
+					BroadcastUtil.broadcastToastMessage(MenuActivity.this, R.string.msg_no_network_available_);
 			}
 		});
 		
@@ -58,7 +70,10 @@ public class MenuActivity extends BaseActivity {
 			
 			@Override
 			public void onClick(View arg0) {
-				
+				if (ApplicationConstants.haveInternet(MenuActivity.this)) 
+					BroadcastUtil.broadcastToastMessage(MenuActivity.this, R.string.update_later);
+				else
+					BroadcastUtil.broadcastToastMessage(MenuActivity.this, R.string.msg_no_network_available_);
 			}
 		});
 		
@@ -66,26 +81,22 @@ public class MenuActivity extends BaseActivity {
 			
 			@Override
 			public void onClick(View v) {
-				
+				if (ApplicationConstants.haveInternet(MenuActivity.this)) 
+					BroadcastUtil.broadcastToastMessage(MenuActivity.this, R.string.update_later);
+				else
+					BroadcastUtil.broadcastToastMessage(MenuActivity.this, R.string.msg_no_network_available_);
 			}
 		});
 		
 		btnRefresh.setVisibility(View.GONE);
 	}
-	
+
 	public void startMainActivity()
 	{
 		final Intent mainActivity = new Intent(MenuActivity.this, MainActivity.class);
 //		mainActivity.setFlags(Intent.FLAG_ACTIVITY_NO_HISTORY);
 		startActivity(mainActivity);
 	}
-	
-//
-//	@Override
-//	public boolean onCreateOptionsMenu(Menu menu) {
-//		// Inflate the menu; this adds items to the action bar if it is present.
-//		getMenuInflater().inflate(R.menu.menu, menu);
-//		return true;
-//	}
+
 
 }

@@ -4,6 +4,7 @@ import com.sbg.hrmsportal.R;
 import com.sbg.hrmsportal.controller.ClaimController;
 import com.sbg.hrmsportal.helper.Session;
 import com.sbg.hrmsportal.util.ActivityUtil;
+import com.sbg.hrmsportal.util.BroadcastUtil;
 import com.sbg.hrmsportal.util.PreferenceUtil;
 import com.sbg.hrmsportal.view.MessageToastView;
 import com.sbg.hrmsportal.view.MessageToastView.MESSAGE_TOAST_TYPE;
@@ -20,8 +21,12 @@ public class MainActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);     
 		
-		GetClaimData getClaimData = new GetClaimData();
-		getClaimData.execute();
+		if (ApplicationConstants.haveInternet(MainActivity.this)) {
+			GetClaimData getClaimData = new GetClaimData();
+			getClaimData.execute();
+		} else {
+			BroadcastUtil.broadcastToastMessage(MainActivity.this, R.string.msg_no_network_available_);
+		}
 	}
 	
 	public class GetClaimData extends AsyncTask<Void, Void, String> {
@@ -55,11 +60,5 @@ public class MainActivity extends Activity {
 	private void initViews() {
 	}
 
-//	@Override
-//	public boolean onCreateOptionsMenu(Menu menu) {
-//		// Inflate the menu; this adds items to the action bar if it is present.
-//		getMenuInflater().inflate(R.menu.main, menu);
-//		return true;
-//	}
 
 }
