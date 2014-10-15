@@ -5,9 +5,24 @@
     <dimen name="activity_vertical_margin">16dp</dimen>
     
     
-
+	<dimen name="padding_xsmall">5dp</dimen>
     <dimen name="padding_small">8dp</dimen>
     <dimen name="padding_large">23dp</dimen>
     <dimen name="padding_normal">15dp</dimen>
-
+    <dimen name="padding_xlarge">50dp</dimen>
+    <dimen name="divider">0dp</dimen>
+    <dimen name="padding_mini">4dp</dimen>
+    <dimen name="padding_xxlarge">75dp</dimen>
+    <dimen name="side_navigation_width">150dp</dimen>
+    
+    <dimen name="side_navigation_item_padding_topbottom">12dp</dimen>
+    <dimen name="side_navigation_item_padding_leftright">8dp</dimen>
+    
+    <dimen name="side_navigation_item_image_height">24dp</dimen>
+    <dimen name="side_navigation_item_image_width">24dp</dimen>
+    <dimen name="side_navigation_item_image_padding">2dp</dimen>
+    
+    <dimen name="side_navigation_item_text_size">18sp</dimen>
+    <dimen name="side_navigation_item_text_padding_left">10dp</dimen>
+    
 </resources>

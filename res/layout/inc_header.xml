@@ -4,7 +4,7 @@
     android:layout_height="wrap_content"
     android:gravity="center_vertical"
     android:orientation="horizontal"
-    android:background="@color/blue" >
+    android:background="@color/light_blue" >
 
     <ImageButton
         android:id="@+id/imgBtnBack"
@@ -13,7 +13,7 @@
         android:background="@color/no_color"
         android:contentDescription="@null"
         android:paddingRight="@dimen/padding_normal"
-        android:src="@drawable/icon_back" />
+        android:src="@drawable/ic_action_previous" />
 
     <com.sbg.hrmsportal.view.TextViewStyled
         android:id="@+id/tvTitle"
@@ -36,8 +36,17 @@
         android:layout_marginRight="@dimen/padding_normal"
         android:background="@color/no_color"
         android:contentDescription="@null"
-        android:src="@drawable/icon_refresh" />
+        android:src="@drawable/ic_action_refresh" />
     
+    <ImageButton
+        android:id="@+id/imgBtnAdd"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="@dimen/padding_normal"
+        android:layout_marginRight="@dimen/padding_normal"
+        android:background="@color/no_color"
+        android:contentDescription="@null"
+        android:src="@drawable/ic_action_new" />
     
     
     <ImageButton
@@ -47,6 +56,6 @@
         android:layout_height="wrap_content"
         android:contentDescription="@null"
         android:background="@color/no_color"
-        android:src="@drawable/icon_log_out" />
+        android:src="@drawable/ic_action_log_out" />
 
 </LinearLayout>

@@ -1,14 +1,14 @@
 package com.sbg.hrmsportal.classMobile;
 
 
-public class claimParse {
+public class ClaimParse {
 	private int claimId;
 	private String claimDesc;
 	private String claimDate;
 	private String claimStatus;
 	private boolean isMessage;
 	
-	public claimParse(int claimId, String claimDesc, String claimDate,
+	public ClaimParse(int claimId, String claimDesc, String claimDate,
 			String claimStatus, boolean isMessage) {
 		super();
 		this.claimId = claimId;

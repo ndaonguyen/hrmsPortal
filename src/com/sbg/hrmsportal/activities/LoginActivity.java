@@ -1,9 +1,11 @@
 package com.sbg.hrmsportal.activities;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.View;
+import android.view.WindowManager;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.EditText;
@@ -17,7 +19,7 @@ import com.sbg.hrmsportal.util.PreferenceUtil;
 import com.sbg.hrmsportal.view.MessageToastView;
 import com.sbg.hrmsportal.view.MessageToastView.MESSAGE_TOAST_TYPE;
 
-public class LoginActivity extends BaseActivity {
+public class LoginActivity extends Activity {
 
 	private EditText etUsername;
 	private EditText etPassword;
@@ -55,6 +57,11 @@ public class LoginActivity extends BaseActivity {
 		});
 		hideKeyboard();
 	}
+	
+	public void hideKeyboard() {
+		getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
+	}
+	
 	
 	/**
 	 * To check the login. If the user Logged successfully, automatically open

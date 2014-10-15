@@ -39,7 +39,7 @@ public class ActivityUtil extends Activity{
 	{
 		ClaimController tableController = Session.getInstance()
 										  .getControllerHelper(context).getClaimController();
-		String empCodeJsonString 			= tableController.getJsonEmpCode(appUsername);
+		String empCodeJsonString 		= tableController.getJsonEmpCode(appUsername);
 		
 		CNetworkClient networkClient    = new CNetworkClient(context);
 		CNetworkResponse response       = networkClient.post(ApplicationConstants.getScriptUrl(ApplicationConstants.SCRIPT_GET_CLAIM),
@@ -50,7 +50,8 @@ public class ActivityUtil extends Activity{
 		
 		String claimDataString      = new String(response.body);
 		CLog.write(claimDataString);
-		
+
+//		claimDataString      = ""; //Temp
 		return claimDataString;
 	}
 	

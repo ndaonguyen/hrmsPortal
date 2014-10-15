@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_card"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:padding="@dimen/padding_normal" >
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center_vertical"
+        android:orientation="vertical" >
+
+        <com.sbg.hrmsportal.view.TextViewQS
+            android:id="@+id/clDesc"
+            style="@style/Header.H3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/hello_world"/>
+
+        <com.sbg.hrmsportal.view.TextViewStyled
+            android:id="@+id/clDate"
+            style="@style/Header.H4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/padding_xsmall"
+            android:shadowDy="0"
+            android:textColor="@color/black"
+            android:text="@string/hello_world" />
+        
+        <com.sbg.hrmsportal.view.TextViewStyled
+            android:id="@+id/clStatus"
+            style="@style/Header.H4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/padding_xsmall"
+            android:shadowDy="0"
+            android:textColor="@color/black"
+             android:text="@string/hello_world" />
+        
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/btnItem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/padding_mini"
+        android:background="@color/light_blue"
+        android:contentDescription="@null"
+        android:src="@drawable/ic_action_collection" />
+    
+     <ImageView
+        android:id="@+id/btnDoc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/padding_mini"
+        android:background="@color/light_blue"
+        android:contentDescription="@null"
+        android:layout_marginLeft="@dimen/padding_small"
+        android:src="@drawable/ic_action_attachment" />
+     
+      <ImageView
+        android:id="@+id/btnMessage"
+        android:layout_width="wrap_content"
+        android:padding="@dimen/padding_mini"
+        android:layout_height="wrap_content"
+        android:background="@color/light_blue"
+        android:contentDescription="@null"
+        android:layout_marginLeft="@dimen/padding_small"
+        android:src="@drawable/ic_action_email" /> 
+      
+
+</LinearLayout>

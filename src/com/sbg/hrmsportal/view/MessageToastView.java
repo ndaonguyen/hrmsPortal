@@ -73,12 +73,12 @@ public class MessageToastView extends LinearLayout {
 		setBackgroundColor(0);
 		if (type == MESSAGE_TOAST_TYPE.MESSAGE_DANGER) {
 			setBackgroundColor(Color.parseColor("#c22a35"));
-			tvMessage.setCompoundDrawablesWithIntrinsicBounds(0, 0, R.drawable.icon_close, 0);
+			tvMessage.setCompoundDrawablesWithIntrinsicBounds(0, 0, R.drawable.ic_action_close, 0);
 		} else if (type == MESSAGE_TOAST_TYPE.MESSAGE_INFO) {
-			tvMessage.setCompoundDrawablesWithIntrinsicBounds(0, 0, R.drawable.icon_info, 0);
+			tvMessage.setCompoundDrawablesWithIntrinsicBounds(0, 0, R.drawable.ic_action_info, 0);
 			setBackgroundColor(Color.parseColor("#3795de"));
 		} else if (type == MESSAGE_TOAST_TYPE.MESSAGE_WARNING) {
-			tvMessage.setCompoundDrawablesWithIntrinsicBounds(0, 0, R.drawable.icon_alert, 0);
+			tvMessage.setCompoundDrawablesWithIntrinsicBounds(0, 0, R.drawable.ic_action_warning, 0);
 			setBackgroundColor(Color.parseColor("#d7a029"));
 		} else if (type == MESSAGE_TOAST_TYPE.MESSAGE_SUCCESS) {
 			setBackgroundColor(Color.parseColor("#31a36f"));

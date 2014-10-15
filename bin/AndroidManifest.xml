@@ -17,7 +17,6 @@
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
         android:theme="@android:style/Theme.Holo.Light.NoActionBar" >
-       
         <activity
             android:name="com.sbg.hrmsportal.activities.LoginActivity"
             android:label="@string/app_name" >
@@ -42,6 +41,22 @@
         <activity
             android:name="com.sbg.hrmsportal.activities.MenuActivity"
             android:label="@string/title_activity_menu" >
+        </activity>
+        <activity
+            android:name="com.sbg.hrmsportal.activities.ClaimAddActivity"
+            android:label="@string/title_activity_claim_add" >
+        </activity>
+        <activity
+            android:name="com.sbg.hrmsportal.activities.ClaimItemActivity"
+            android:label="@string/title_activity_claim_item" >
+        </activity>
+        <activity
+            android:name="com.sbg.hrmsportal.activities.ClaimDocActivity"
+            android:label="@string/title_activity_claim_doc" >
+        </activity>
+        <activity
+            android:name="com.sbg.hrmsportal.activities.ClaimMessageActivity"
+            android:label="@string/title_activity_claim_message" >
         </activity>
     </application>
 
