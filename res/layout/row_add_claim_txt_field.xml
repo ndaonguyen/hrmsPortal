@@ -12,7 +12,7 @@
         android:layout_marginTop="@dimen/padding_normal"
         android:layout_weight="0.35"
         android:paddingLeft="@dimen/padding_small"
-        android:textColor="@color/blue" />
+        android:textColor="@color/black" />
     
     <EditText
         android:id="@+id/txtValue"

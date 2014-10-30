@@ -104,23 +104,6 @@ public abstract class BaseClaimActivity extends Activity{
 			});
 		}
 		
-//		if (btnAdd == null) {
-//			btnAdd = (ImageButton) findViewById(R.id.imgBtnAdd);
-//			btnAdd.setOnClickListener(new OnClickListener() {
-//				
-//				@Override
-//				public void onClick(View v) {
-//					if (ApplicationConstants.haveInternet(BaseClaimActivity.this)) {
-//						startActivity(new Intent(BaseClaimActivity.this, ClaimAddActivity.class));
-//						overridePendingTransition(R.anim.slide_in_left_to_right, R.anim.slide_out_curr_to_right);
-//					} else {
-//						BroadcastUtil.broadcastToastMessage(BaseClaimActivity.this, R.string.msg_no_network_available_);
-//					}
-//				}
-//			});
-//		}
-		
-		
 	}
 	
 	protected void logout() {
@@ -137,5 +120,19 @@ public abstract class BaseClaimActivity extends Activity{
 			title    = (TextViewStyled) findViewById(R.id.tvTitle);
 		
 		title.setText(titleStr);
+	}
+	
+	/**
+	 * This will be start activity with Animation
+	 * 
+	 * @param intent
+	 * @param finish
+	 *            Finish current activity.
+	 */
+	public void startActivity(Intent intent) {
+		super.startActivity(intent);
+		overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_curr_to_left);
+//		if (finish)
+//			finish();
 	}
 }

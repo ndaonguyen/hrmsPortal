@@ -92,7 +92,6 @@ public class ClaimDocActivity extends BaseClaimActivity {
 			public void onClick(View v) {
 				if (ApplicationConstants.haveInternet(ClaimDocActivity.this)) {
 					startActivity(new Intent(ClaimDocActivity.this, ClaimDocAddActivity.class));
-					overridePendingTransition(R.anim.slide_in_left_to_right, R.anim.slide_out_curr_to_right);
 				} else {
 					BroadcastUtil.broadcastToastMessage(ClaimDocActivity.this, R.string.msg_no_network_available_);
 				}
@@ -122,7 +121,6 @@ public class ClaimDocActivity extends BaseClaimActivity {
 			public void onItemClick(AdapterView<?> arg0, View arg1, int position, long id) {
 				Intent intent = new Intent(ClaimDocActivity.this, ClaimDocAddActivity.class);
 				startActivity(intent);
-				overridePendingTransition(R.anim.slide_in_left_to_right, R.anim.slide_out_curr_to_right);
 			}
 		});
 	}

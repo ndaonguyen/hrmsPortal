@@ -2,6 +2,7 @@
 <resources>
 
 	<color name="white">#ffffff</color>
+	<color name="grey_blue">#2F5665</color>
 	<color name="no_color">#00ffffff</color>
 	<color name="transparent_white">#88ffffff</color>
 	<color name="transparent_black">#88000000</color>
@@ -27,6 +28,7 @@
 	<color name="side_navigation_item_text_color">#f3f3f3</color>
 	<color name="black">#000</color>
 	<color name="orange">#e7790e</color>
+	<color name="dark_red">#84050C</color>
 	<color name="grey">#555555</color>
 	<color name="light_gery">#cccccc</color>
 	<color name="light_blue">#3f81ed</color>
@@ -35,6 +37,7 @@
 	<color name="green">#0c971f</color>
 	<color name="red_dark">#241313</color>
 	<color name="dark_grey_strong">#0a0a0a</color>
+	<color name="light_yellow_blue">#1E91AE</color>
 	<color name="app_color">#f6f6f6</color>
 	<color name="blue">#1a58bf</color>
 	<color name="checked_in">#ecfff0</color>

@@ -69,7 +69,6 @@ public class MenuActivity extends BaseClaimActivity {
 		final Intent mainActivity = new Intent(MenuActivity.this, MainActivity.class);
 //		mainActivity.setFlags(Intent.FLAG_ACTIVITY_NO_HISTORY);
 		startActivity(mainActivity);
-		overridePendingTransition(R.anim.slide_in_left_to_right, R.anim.slide_out_curr_to_right);
 	}
 
 	@Override

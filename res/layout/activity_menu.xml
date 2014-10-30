@@ -11,7 +11,7 @@
 
     <Button
         android:id="@+id/btnLeave"
-        style="@style/Button.Blue"
+        style="@style/Button.Black"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
@@ -22,7 +22,7 @@
 
     <Button
         android:id="@+id/btnClaim"
-        style="@style/Button.Blue"
+        style="@style/Button.Black"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentRight="true"

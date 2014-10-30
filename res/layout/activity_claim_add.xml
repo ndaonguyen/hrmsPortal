@@ -41,7 +41,7 @@
 		                
 		            <Button
 		                android:id="@+id/btnAddClaim"
-		                style="@style/Button.Blue"
+		                style="@style/Button.Black"
 		                android:layout_width="wrap_content"
 		                android:layout_height="wrap_content"
 		                android:layout_margin="@dimen/padding_normal"

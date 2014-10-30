@@ -45,29 +45,29 @@
 
     <ImageView
         android:id="@+id/btnItem"
+        style="@style/Button.Default"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:padding="@dimen/padding_mini"
-        android:background="@color/light_blue"
         android:contentDescription="@null"
         android:src="@drawable/ic_action_collection" />
     
      <ImageView
         android:id="@+id/btnDoc"
+        style="@style/Button.Default"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:padding="@dimen/padding_mini"
-        android:background="@color/light_blue"
         android:contentDescription="@null"
         android:layout_marginLeft="@dimen/padding_small"
         android:src="@drawable/ic_action_attachment" />
      
       <ImageView
         android:id="@+id/btnMessage"
+        style="@style/Button.Default"
         android:layout_width="wrap_content"
         android:padding="@dimen/padding_mini"
         android:layout_height="wrap_content"
-        android:background="@color/light_blue"
         android:contentDescription="@null"
         android:layout_marginLeft="@dimen/padding_small"
         android:src="@drawable/ic_action_email" /> 

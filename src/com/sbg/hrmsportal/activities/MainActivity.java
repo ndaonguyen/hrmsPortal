@@ -87,7 +87,6 @@ public class MainActivity extends BaseClaimActivity {
 			public void onClick(View v) {
 				if (ApplicationConstants.haveInternet(MainActivity.this)) {
 					startActivity(new Intent(MainActivity.this, ClaimAddActivity.class));
-					overridePendingTransition(R.anim.slide_in_left_to_right, R.anim.slide_out_curr_to_right);
 				} else {
 					BroadcastUtil.broadcastToastMessage(MainActivity.this, R.string.msg_no_network_available_);
 				}
@@ -123,7 +122,6 @@ public class MainActivity extends BaseClaimActivity {
 			public void onItemClick(AdapterView<?> arg0, View arg1, int position, long id) {
 				Intent intent = new Intent(MainActivity.this, ClaimAddActivity.class);
 				startActivity(intent);
-				overridePendingTransition(R.anim.slide_in_left_to_right, R.anim.slide_out_curr_to_right);
 			}
 		});
 	}
@@ -177,7 +175,6 @@ public class MainActivity extends BaseClaimActivity {
 				public void onClick(View arg0) {
 					Intent intent = new Intent(MainActivity.this, ClaimDocActivity.class);
 					startActivity(intent);
-					overridePendingTransition(R.anim.slide_in_left_to_right, R.anim.slide_out_curr_to_right);
 				}
 			});
 			
@@ -188,7 +185,6 @@ public class MainActivity extends BaseClaimActivity {
 				public void onClick(View arg0) {
 					Intent intent = new Intent(MainActivity.this, ClaimItemActivity.class);
 					startActivity(intent);
-					overridePendingTransition(R.anim.slide_in_left_to_right, R.anim.slide_out_curr_to_right);
 				}
 			});
 			
@@ -199,7 +195,6 @@ public class MainActivity extends BaseClaimActivity {
 				public void onClick(View arg0) {
 					Intent intent = new Intent(MainActivity.this, ClaimMessageActivity.class);
 					startActivity(intent);
-					overridePendingTransition(R.anim.slide_in_left_to_right, R.anim.slide_out_curr_to_right);
 				}
 			});
 

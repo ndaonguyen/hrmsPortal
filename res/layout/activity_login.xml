@@ -51,7 +51,7 @@
         
         <Button
             android:id="@+id/btnLogin"
-            style="@style/Button.Blue"
+            style="@style/Button.Black"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/padding_large"

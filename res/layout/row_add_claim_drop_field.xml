@@ -6,13 +6,13 @@
 
     <com.sbg.hrmsportal.view.TextViewStyleBold
         android:id="@+id/tvLabel"
-        style="@style/Header.H3"
+        style="@style/Header.H4"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/padding_normal"
         android:layout_weight="0.35"
         android:paddingLeft="@dimen/padding_small"
-        android:textColor="@color/blue" />
+        android:textColor="@color/black" />
 
     <Spinner
 	    android:id="@+id/spValue"
