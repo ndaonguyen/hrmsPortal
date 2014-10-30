@@ -1,7 +1,10 @@
 package com.sbg.hrmsportal.classMobile;
 
+import java.io.Serializable;
 
-public class ClaimParse {
+
+public class ClaimParse implements Serializable{
+	private static final long serialVersionUID = 1L;
 	private int claimId;
 	private String claimDesc;
 	private String claimDate;
@@ -18,6 +21,9 @@ public class ClaimParse {
 		this.isMessage = isMessage;
 	}
 	
+	public ClaimParse() {
+	}
+
 	public boolean isMessage() {
 		return isMessage;
 	}

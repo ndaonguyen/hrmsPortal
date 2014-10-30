@@ -58,6 +58,10 @@
             android:name="com.sbg.hrmsportal.activities.ClaimMessageActivity"
             android:label="@string/title_activity_claim_message" >
         </activity>
+        <activity
+            android:name="com.sbg.hrmsportal.activities.ClaimDocAddActivity"
+            android:label="@string/title_activity_claim_doc_add" >
+        </activity>
     </application>
 
 </manifest>

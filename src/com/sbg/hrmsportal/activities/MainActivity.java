@@ -7,9 +7,7 @@ import com.sbg.hrmsportal.R;
 import com.sbg.hrmsportal.classMobile.ClaimParse;
 import com.sbg.hrmsportal.controller.ClaimController;
 import com.sbg.hrmsportal.helper.Session;
-import com.sbg.hrmsportal.util.ActivityUtil;
 import com.sbg.hrmsportal.util.BroadcastUtil;
-import com.sbg.hrmsportal.util.PreferenceUtil;
 import com.sbg.hrmsportal.view.MessageToastView;
 import com.sbg.hrmsportal.view.MessageToastView.MESSAGE_TOAST_TYPE;
 import com.sbg.hrmsportal.view.TextViewQS;
@@ -22,17 +20,18 @@ import android.view.ViewGroup;
 import android.view.View.OnClickListener;
 import android.widget.AdapterView;
 import android.widget.BaseAdapter;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.AdapterView.OnItemClickListener;
-import android.content.Context;
 import android.content.Intent;
 
 public class MainActivity extends BaseClaimActivity {
 	
-	private List<ClaimParse> mGuestList = null;
+	private List<ClaimParse> mClaimList = null;
 	private ListView lvMain;
-	private GuestAdapter mAdapter;
+	private ClaimAdapter mAdapter;
+	private ImageButton btnAdd;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -51,14 +50,16 @@ public class MainActivity extends BaseClaimActivity {
 
 		@Override
 		protected String doInBackground(Void... params) {
-			Context context = MainActivity.this;
-			String empCode  = PreferenceUtil.getInstance(context).getAppUserName();
-			
-			String claimResponseString	= ActivityUtil.getClaimResponseString(MainActivity.this, empCode);
-			if(claimResponseString.equals(""))
-				return "";
-			
-			return claimResponseString;
+//			Context context = MainActivity.this;
+			//uncomment when finish mocking
+//			String empCode  = PreferenceUtil.getInstance(context).getAppUserName();
+//			
+//			String claimResponseString	= ActivityUtil.getClaimResponseString(MainActivity.this, empCode);
+//			if(claimResponseString.equals(""))
+//				return "";
+//			
+//			return claimResponseString;
+			return "test";
 		}
 
 		@Override
@@ -79,27 +80,41 @@ public class MainActivity extends BaseClaimActivity {
 		lvMain = (ListView) findViewById(R.id.lvMain);
 		initAdapter();
 		
+		btnAdd = (ImageButton) findViewById(R.id.imgBtnAdd);
+		btnAdd.setOnClickListener(new OnClickListener() {
+		
+			@Override
+			public void onClick(View v) {
+				if (ApplicationConstants.haveInternet(MainActivity.this)) {
+					startActivity(new Intent(MainActivity.this, ClaimAddActivity.class));
+					overridePendingTransition(R.anim.slide_in_left_to_right, R.anim.slide_out_curr_to_right);
+				} else {
+					BroadcastUtil.broadcastToastMessage(MainActivity.this, R.string.msg_no_network_available_);
+				}
+			}
+		});
+		
 		setTitle("Claim");
 	}
 	
 	private void initAdapter() {
-		mGuestList = new ArrayList<ClaimParse>();
-		mGuestList.add(new ClaimParse(1, "claim 1", "17/10/2014", "Not submitted", true));
-		mGuestList.add(new ClaimParse(2, "claim 2", "1/10/2014", "Not submitted", false));
-		mGuestList.add(new ClaimParse(3, "claim 3", "11/10/2014", "Not submitted", false));
-		mGuestList.add(new ClaimParse(4, "claim 4", "12/10/2014", "Not submitted", false));
-		mGuestList.add(new ClaimParse(5, "claim 5", "13/10/2014", "Not submitted", true));
-		mGuestList.add(new ClaimParse(6, "claim 6", "14/10/2014", "Not submitted", true));
+		mClaimList = new ArrayList<ClaimParse>();
+		mClaimList.add(new ClaimParse(1, "claim 1", "17/10/2014", "Not submitted", true));
+		mClaimList.add(new ClaimParse(2, "claim 2", "1/10/2014", "Not submitted", false));
+		mClaimList.add(new ClaimParse(3, "claim 3", "11/10/2014", "Not submitted", false));
+		mClaimList.add(new ClaimParse(4, "claim 4", "12/10/2014", "Not submitted", false));
+		mClaimList.add(new ClaimParse(5, "claim 5", "13/10/2014", "Not submitted", true));
+		mClaimList.add(new ClaimParse(6, "claim 6", "14/10/2014", "Not submitted", true));
 		
-		mGuestList.add(new ClaimParse(7, "claim 7", "17/10/2014", "Not submitted", true));
-		mGuestList.add(new ClaimParse(8, "claim 8", "1/10/2014", "Not submitted", false));
-		mGuestList.add(new ClaimParse(9, "claim 9", "11/10/2014", "Not submitted", false));
-		mGuestList.add(new ClaimParse(10, "claim 10", "12/10/2014", "Not submitted", false));
-		mGuestList.add(new ClaimParse(11, "claim 11", "13/10/2014", "Not submitted", true));
-		mGuestList.add(new ClaimParse(12, "claim 12", "14/10/2014", "Not submitted", true));
+		mClaimList.add(new ClaimParse(7, "claim 7", "17/10/2014", "Not submitted", true));
+		mClaimList.add(new ClaimParse(8, "claim 8", "1/10/2014", "Not submitted", false));
+		mClaimList.add(new ClaimParse(9, "claim 9", "11/10/2014", "Not submitted", false));
+		mClaimList.add(new ClaimParse(10, "claim 10", "12/10/2014", "Not submitted", false));
+		mClaimList.add(new ClaimParse(11, "claim 11", "13/10/2014", "Not submitted", true));
+		mClaimList.add(new ClaimParse(12, "claim 12", "14/10/2014", "Not submitted", true));
 		
 
-		mAdapter = new GuestAdapter();
+		mAdapter = new ClaimAdapter();
 		lvMain.setAdapter(mAdapter);
 
 		lvMain.setOnItemClickListener(new OnItemClickListener() {
@@ -113,7 +128,7 @@ public class MainActivity extends BaseClaimActivity {
 		});
 	}
 	
-	public class GuestAdapter extends BaseAdapter {
+	public class ClaimAdapter extends BaseAdapter {
 
 		public class ViewHolder {
 			public TextViewQS clDesc;
@@ -193,17 +208,17 @@ public class MainActivity extends BaseClaimActivity {
 
 		@Override
 		public int getCount() {
-			return mGuestList.size();
+			return mClaimList.size();
 		}
 
 		@Override
 		public Object getItem(int position) {
-			return mGuestList.get(position);
+			return mClaimList.get(position);
 		}
 
 		@Override
 		public long getItemId(int position) {
-			return mGuestList.get(position).getClaimId();
+			return mClaimList.get(position).getClaimId();
 		}
 	}
 

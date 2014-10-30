@@ -49,7 +49,7 @@ public class ClaimAddActivity extends BaseClaimActivity {
 	
 	private void addOneTxtRow(String label, int id) {
 		LayoutInflater inflater = getLayoutInflater();
-		View rowTemplateView = inflater.inflate(R.layout.row_add_claim_txt_field, null);
+		View rowTemplateView = (View) inflater.inflate(R.layout.row_add_claim_txt_field, null);
 
 		TextViewStyleBold labelRow = (TextViewStyleBold) rowTemplateView.findViewById(R.id.tvLabel);
 		labelRow.setText(label);
@@ -63,12 +63,12 @@ public class ClaimAddActivity extends BaseClaimActivity {
 	
 	private void addOneSpinnerRow(String label, int id) {
 		LayoutInflater inflater = getLayoutInflater();
-		View rowTemplateView = inflater.inflate(R.layout.row_add_claim_drop_field, null);
+		View rowTemplateView = (View) inflater.inflate(R.layout.row_add_claim_drop_field, null);
 
 		TextViewStyleBold labelRow = (TextViewStyleBold) rowTemplateView.findViewById(R.id.tvLabel);
 		labelRow.setText(label);
-
-		Spinner spinnerRow = (Spinner) rowTemplateView.findViewById(R.id.tvValue);
+		
+		Spinner spinnerRow = (Spinner) rowTemplateView.findViewById(R.id.spValue);
 		List<String> list = new ArrayList<String>();
         list.add("Android");
         list.add("Java");
@@ -107,9 +107,10 @@ public class ClaimAddActivity extends BaseClaimActivity {
 		rowLayout.addView(rowTemplateView);
 	}
 	
+	
 	public void addListenerOnSpinnerItemSelection(Spinner spinner1){
         
 	}
 	
-
+	
 }

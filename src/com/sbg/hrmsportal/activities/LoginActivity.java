@@ -13,9 +13,7 @@ import android.widget.EditText;
 import com.sbg.hrmsportal.R;
 import com.sbg.hrmsportal.controller.LoginController;
 import com.sbg.hrmsportal.helper.Session;
-import com.sbg.hrmsportal.util.ActivityUtil;
 import com.sbg.hrmsportal.util.BroadcastUtil;
-import com.sbg.hrmsportal.util.PreferenceUtil;
 import com.sbg.hrmsportal.view.MessageToastView;
 import com.sbg.hrmsportal.view.MessageToastView.MESSAGE_TOAST_TYPE;
 
@@ -87,19 +85,21 @@ public class LoginActivity extends Activity {
 
 		@Override
 		protected Boolean doInBackground(String... params) {
-			String usernameTxt     		= params[0];
-			String pwdTxt 	       		= params[1];
-			String loginResponseString	= ActivityUtil.getLoginResponseString(LoginActivity.this, 
-					  usernameTxt, pwdTxt);
+//			String usernameTxt     		= params[0];
+//			String pwdTxt 	       		= params[1];
+			//uncomment when connecting to real server
 			
-			if(loginResponseString.equals(""))
-				return false;
-			
-			boolean resultLogin    = tableController.isLoginSuccess(loginResponseString);
-			if(resultLogin == false )
-				return false;
-			
-			PreferenceUtil.getInstance(LoginActivity.this).setAppUserName(usernameTxt);
+//			String loginResponseString	= ActivityUtil.getLoginResponseString(LoginActivity.this, 
+//					  usernameTxt, pwdTxt);
+//			
+//			if(loginResponseString.equals(""))
+//				return false;
+//			
+//			boolean resultLogin    = tableController.isLoginSuccess(loginResponseString);
+//			if(resultLogin == false )
+//				return false;
+//			
+//			PreferenceUtil.getInstance(LoginActivity.this).setAppUserName(usernameTxt);
 			return true;
 		}
 		

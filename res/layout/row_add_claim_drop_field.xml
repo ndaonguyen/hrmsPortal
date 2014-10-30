@@ -15,7 +15,7 @@
         android:textColor="@color/blue" />
 
     <Spinner
-	    android:id="@+id/tvValue"
+	    android:id="@+id/spValue"
 	    android:layout_width="0dp"
 	    android:layout_height="wrap_content"
 	    android:paddingLeft="@dimen/padding_small"

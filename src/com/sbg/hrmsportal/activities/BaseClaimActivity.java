@@ -17,7 +17,7 @@ public abstract class BaseClaimActivity extends Activity{
 	private ImageButton btnBack;
 	private ImageButton btnRefresh;
 	private ImageButton btnLogout;
-	private ImageButton btnAdd;
+//	private ImageButton btnAdd;
 	private TextViewStyled title;
 	
 	
@@ -104,21 +104,21 @@ public abstract class BaseClaimActivity extends Activity{
 			});
 		}
 		
-		if (btnAdd == null) {
-			btnAdd = (ImageButton) findViewById(R.id.imgBtnAdd);
-			btnAdd.setOnClickListener(new OnClickListener() {
-				
-				@Override
-				public void onClick(View v) {
-					if (ApplicationConstants.haveInternet(BaseClaimActivity.this)) {
-						startActivity(new Intent(BaseClaimActivity.this, ClaimAddActivity.class));
-						overridePendingTransition(R.anim.slide_in_left_to_right, R.anim.slide_out_curr_to_right);
-					} else {
-						BroadcastUtil.broadcastToastMessage(BaseClaimActivity.this, R.string.msg_no_network_available_);
-					}
-				}
-			});
-		}
+//		if (btnAdd == null) {
+//			btnAdd = (ImageButton) findViewById(R.id.imgBtnAdd);
+//			btnAdd.setOnClickListener(new OnClickListener() {
+//				
+//				@Override
+//				public void onClick(View v) {
+//					if (ApplicationConstants.haveInternet(BaseClaimActivity.this)) {
+//						startActivity(new Intent(BaseClaimActivity.this, ClaimAddActivity.class));
+//						overridePendingTransition(R.anim.slide_in_left_to_right, R.anim.slide_out_curr_to_right);
+//					} else {
+//						BroadcastUtil.broadcastToastMessage(BaseClaimActivity.this, R.string.msg_no_network_available_);
+//					}
+//				}
+//			});
+//		}
 		
 		
 	}

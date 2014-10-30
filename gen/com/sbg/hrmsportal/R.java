@@ -103,37 +103,45 @@ public final class R {
         public static final int ic_action_new=0x7f02000d;
         public static final int ic_action_previous=0x7f02000e;
         public static final int ic_action_refresh=0x7f02000f;
-        public static final int ic_action_warning=0x7f020010;
-        public static final int ic_launcher=0x7f020011;
-        public static final int icon_key=0x7f020012;
-        public static final int icon_user=0x7f020013;
+        public static final int ic_action_remove=0x7f020010;
+        public static final int ic_action_save=0x7f020011;
+        public static final int ic_action_warning=0x7f020012;
+        public static final int ic_launcher=0x7f020013;
+        public static final int icon_key=0x7f020014;
+        public static final int icon_user=0x7f020015;
     }
     public static final class id {
         public static final int ClaimTemplateLayout=0x7f0b0001;
-        public static final int MainActitity=0x7f0b0007;
-        public static final int action_settings=0x7f0b0018;
+        public static final int MainActitity=0x7f0b0004;
+        public static final int action_settings=0x7f0b001e;
         public static final int btnAddClaim=0x7f0b0002;
         public static final int btnClaim=0x7f0b000a;
+        public static final int btnDelete=0x7f0b0019;
         public static final int btnDoc=0x7f0b0014;
+        public static final int btnDownload=0x7f0b001a;
         public static final int btnItem=0x7f0b0013;
         public static final int btnLeave=0x7f0b0009;
-        public static final int btnLogin=0x7f0b0006;
+        public static final int btnLogin=0x7f0b0008;
         public static final int btnMessage=0x7f0b0015;
         public static final int clDate=0x7f0b0011;
         public static final int clDesc=0x7f0b0010;
         public static final int clStatus=0x7f0b0012;
-        public static final int etPassword=0x7f0b0005;
-        public static final int etUsername=0x7f0b0004;
+        public static final int docCurrName=0x7f0b0018;
+        public static final int docDesc=0x7f0b0016;
+        public static final int docOriName=0x7f0b0017;
+        public static final int etPassword=0x7f0b0007;
+        public static final int etUsername=0x7f0b0006;
         public static final int imgBtnAdd=0x7f0b000e;
         public static final int imgBtnBack=0x7f0b000b;
         public static final int imgBtnLogout=0x7f0b000f;
         public static final int imgBtnRefresh=0x7f0b000d;
         public static final int include1=0x7f0b0000;
-        public static final int loginLayout=0x7f0b0003;
-        public static final int lvMain=0x7f0b0008;
-        public static final int tvLabel=0x7f0b0016;
+        public static final int loginLayout=0x7f0b0005;
+        public static final int lvMain=0x7f0b0003;
+        public static final int spValue=0x7f0b001c;
+        public static final int tvLabel=0x7f0b001b;
         public static final int tvTitle=0x7f0b000c;
-        public static final int tvValue=0x7f0b0017;
+        public static final int txtValue=0x7f0b001d;
     }
     public static final class integer {
         public static final int abc_max_action_buttons=0x7f070004;
@@ -153,24 +161,27 @@ public final class R {
     public static final class layout {
         public static final int activity_claim_add=0x7f030000;
         public static final int activity_claim_doc=0x7f030001;
-        public static final int activity_claim_item=0x7f030002;
-        public static final int activity_claim_message=0x7f030003;
-        public static final int activity_login=0x7f030004;
-        public static final int activity_main=0x7f030005;
-        public static final int activity_menu=0x7f030006;
-        public static final int inc_header=0x7f030007;
-        public static final int listitem_claim=0x7f030008;
-        public static final int row_add_claim_drop_field=0x7f030009;
-        public static final int row_add_claim_txt_field=0x7f03000a;
+        public static final int activity_claim_doc_add=0x7f030002;
+        public static final int activity_claim_item=0x7f030003;
+        public static final int activity_claim_message=0x7f030004;
+        public static final int activity_login=0x7f030005;
+        public static final int activity_main=0x7f030006;
+        public static final int activity_menu=0x7f030007;
+        public static final int inc_header=0x7f030008;
+        public static final int listitem_claim=0x7f030009;
+        public static final int listitem_doc=0x7f03000a;
+        public static final int row_add_claim_drop_field=0x7f03000b;
+        public static final int row_add_claim_txt_field=0x7f03000c;
     }
     public static final class menu {
         public static final int claim_add=0x7f0a0000;
         public static final int claim_doc=0x7f0a0001;
-        public static final int claim_item=0x7f0a0002;
-        public static final int claim_message=0x7f0a0003;
-        public static final int login=0x7f0a0004;
-        public static final int main=0x7f0a0005;
-        public static final int menu=0x7f0a0006;
+        public static final int claim_doc_add=0x7f0a0002;
+        public static final int claim_item=0x7f0a0003;
+        public static final int claim_message=0x7f0a0004;
+        public static final int login=0x7f0a0005;
+        public static final int main=0x7f0a0006;
+        public static final int menu=0x7f0a0007;
     }
     public static final class string {
         public static final int action_settings=0x7f080001;
@@ -187,6 +198,7 @@ public final class R {
         public static final int msg_no_network_available_=0x7f080005;
         public static final int title_activity_claim_add=0x7f08000e;
         public static final int title_activity_claim_doc=0x7f080010;
+        public static final int title_activity_claim_doc_add=0x7f080013;
         public static final int title_activity_claim_item=0x7f08000f;
         public static final int title_activity_claim_message=0x7f080011;
         public static final int title_activity_main=0x7f080007;
